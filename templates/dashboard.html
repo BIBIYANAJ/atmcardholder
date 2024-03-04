@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #158f83;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #158f83;
+        }
+        .action-form {
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://t4.ftcdn.net/jpg/04/99/95/13/240_F_499951361_wrybYY7HQrmMbD80vimcU1BagQa6lAZQ.jpg" alt="ATM Logo">
+        <h1>Welcome, {{ holder[2] }}!</h1>
+        <h2>Your Card Information:</h2>
+        <p>Card Number: {{ holder[0] }}</p>
+        <p>First Name: {{ holder[2] }}</p>
+        <p>Last Name: {{ holder[3] }}</p>
+        <p>Balance: ${{ holder[4] }}</p>
+
+        <h2>Actions:</h2>
+        <form class="action-form" action="/deposit" method="post">
+            <input type="hidden" name="card_number" value="{{ holder[0] }}">
+            <label for="deposit_amount">Deposit Amount:</label><br>
+            <input type="number" id="deposit_amount" name="deposit_amount" required><br>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <form class="action-form" action="/withdraw" method="post">
+            <input type="hidden" name="card_number" value="{{ holder[0] }}">
+            <label for="withdraw_amount">Withdraw Amount:</label><br>
+            <input type="number" id="withdraw_amount" name="withdraw_amount" required><br>
+            <button type="submit">Withdraw</button>
+        </form>
+
+        <form class="action-form" action="/check_balance" method="post">
+            <input type="hidden" name="card_number" value="{{ holder[0] }}">
+            <button type="submit">Check Balance</button>
+        </form>
+
+        <form class="action-form" action="/" method="get">
+            <button type="submit">Back to Login Page</button>
+        </form>
+    </div>
+</body>
+</html>
