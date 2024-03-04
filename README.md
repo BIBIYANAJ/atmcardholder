@@ -29,3 +29,32 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/BIBIYANAJ/atmcardholder.git
    ```
+1. Install the required dependencies:
+ ```bash
+pip install -r requirements.txt
+```
+2. Set up a MySQL database and update the database configuration in 'app.py' with your database credentials
+3. Run the Flask application by executing the 'app.py' file:
+```bash
+python app.py
+```
+4. Access the application in your web browser at 'http://localhost:5000'.
+
+## Usage
+- Access the application in your web browser.
+- Log in using your card number and pin.
+- Perform actions such as depositing, withdrawing, or checking your balance.
+
+## Technologies Used
+- Python
+- Flask
+- MySQL
+
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or create a pull request.
+
+## License
+This project is licensed under the terms of the MIT license.
+
+## Author
+Bibiyana J
