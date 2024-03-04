@@ -2,6 +2,10 @@
 
 This project is a simple ATM card holder system implemented in Python using Flask and MySQL. It allows users to perform basic ATM actions such as depositing money, withdrawing money, and checking their account balance.
 
+![Screenshot 2024-03-04 235837](https://github.com/BIBIYANAJ/atmcardholder/assets/126191304/f3e54021-4195-49dc-81b5-34e903b91d05)
+
+![Screenshot 2024-03-04 235752](https://github.com/BIBIYANAJ/atmcardholder/assets/126191304/55fb6792-f8bc-4655-b683-3bc2038a1339)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -13,12 +17,12 @@ This project is a simple ATM card holder system implemented in Python using Flas
 
 ## Features
 
-- **User Authentication**: Users can log in using their card number and pin.
-- **Deposit**: Users can deposit money into their account.
-- **Withdraw**: Users can withdraw money from their account.
-- **Check Balance**: Users can check their account balance.
-- **Create Account**: New users can create an account with a card number, pin, first name, last name, and initial balance.
-- **MySQL Database**: The application uses a MySQL database to store user account information.
+- ***User Authentication***: Users can log in using their card number and pin.
+- ***Deposit***: Users can deposit money into their account.
+- ***Withdraw***: Users can withdraw money from their account.
+- ***Check Balance***: Users can check their account balance.
+- ***Create Account***: New users can create an account with a card number, pin, first name, last name, and initial balance.
+- ***MySQL Database***: The application uses a MySQL database to store user account information.
 
 ## Installation
 
@@ -30,14 +34,14 @@ To run this project locally, follow these steps:
    git clone https://github.com/BIBIYANAJ/atmcardholder.git
    ```
 1. Install the required dependencies:
- ```bash
-pip install -r requirements.txt
-```
+    ```bash
+   pip install -r requirements.txt
+   ```
 2. Set up a MySQL database and update the database configuration in 'app.py' with your database credentials
 3. Run the Flask application by executing the 'app.py' file:
-```bash
-python app.py
-```
+   ```bash
+   python app.py
+   ```
 4. Access the application in your web browser at 'http://localhost:5000'.
 
 ## Usage
